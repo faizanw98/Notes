@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8sp"
+        android:transitionName="edit_transition"
         style="@style/Widget.Material3.CardView.Outlined">
 
         <RelativeLayout
