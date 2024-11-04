@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8sp"
         android:transitionName="edit_transition"
+        android:checkable="true"
         style="@style/Widget.Material3.CardView.Outlined">
 
         <RelativeLayout
@@ -31,7 +32,6 @@
                 android:paddingTop="6sp"
                 android:textStyle="bold"
                 app:noteTitle="@{note}"
-                android:layout_toStartOf="@id/delete_button"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="16sp"
                 android:layout_marginEnd="16sp"
@@ -46,21 +46,10 @@
                 app:noteText="@{note}"
                 android:layout_marginStart="16sp"
                 android:layout_marginEnd="16sp"
-                android:layout_toStartOf="@id/delete_button"
                 android:layout_alignParentStart="true"
                 tools:text="World"
                 android:layout_marginBottom="6sp"
                 android:layout_marginTop="6sp"/>
-
-            <ImageButton
-                android:id="@+id/delete_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="16sp"
-                style="@style/Widget.Material3.Button.IconButton.Outlined"
-                android:src="@drawable/ic_outline_delete"
-                android:layout_alignParentEnd="true"/>
         </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 </layout>

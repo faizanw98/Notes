@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.devfaizan.notes"
-    compileSdk = 34
+    compileSdk = 35
 
     configurations{ implementation.get().exclude(mapOf("group" to "org.jetbrains", "module" to "annotations")) }
     defaultConfig {
@@ -57,4 +57,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+}
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }

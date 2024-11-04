@@ -15,13 +15,13 @@
     <fragment
         android:id="@+id/editNoteFragment"
         android:name="com.devfaizan.notes.editnote.EditNoteFragment"
-        android:label="EditNoteFragment" >
+        android:label="Edit">
         <action
             android:id="@+id/action_editNoteFragment_to_notesFragment"
             app:destination="@id/notesFragment" />
         <argument
             android:name="noteID"
-            app:argType="long"
-            android:defaultValue="-1L" />
+            android:defaultValue="-1L"
+            app:argType="long" />
     </fragment>
 </navigation>

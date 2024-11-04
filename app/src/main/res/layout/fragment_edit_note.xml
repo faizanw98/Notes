@@ -35,7 +35,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/title"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
@@ -53,7 +52,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="0sp"
                 android:hint="@string/note"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/title_edit_layout">
 
@@ -62,10 +60,9 @@
                     android:layout_width="match_parent"
                     android:gravity="start|top"
                     android:layout_height="match_parent"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
                     android:text="@{viewModel.note.noteText}"
-                    android:minLines="3"
-                    android:maxLines="3"/>
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

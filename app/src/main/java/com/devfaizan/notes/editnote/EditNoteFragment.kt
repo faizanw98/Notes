@@ -1,7 +1,6 @@
 package com.devfaizan.notes.editnote
 
 import android.os.Bundle
-import android.transition.TransitionInflater
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.NavigationUI
-import androidx.navigation.ui.navigateUp
 import com.devfaizan.notes.R
 import com.devfaizan.notes.databinding.FragmentEditNoteBinding
 import com.devfaizan.notes.model.Note
@@ -59,9 +57,7 @@ class EditNoteFragment : Fragment() {
                     binding.titleEdit.text.toString(),
                     binding.textEdit.text.toString()
                 )
-                if(note.noteTitle!=""||note.noteText!=""){
-                    editNoteViewModel.update(note)
-                }
+                editNoteViewModel.update(note)
 
             } else {
                 val note = Note(

@@ -26,5 +26,6 @@ interface NoteDao {
 
     @Query("SELECT * from notes_table")
     fun getAllNotes(): LiveData<List<Note>>
-
+    @Query("SELECT * FROM notes_table ORDER BY noteId DESC LIMIT 1")
+    fun getLastNote(): Note
 }
